@@ -13,3 +13,21 @@ body {
   font-size: 16px;
   line-height: 16px;
 }
+
+@keyframes colorful {
+  0% {
+    color: cyan;
+  }
+  25% {
+    color: green;
+  }
+  50% {
+    color: yellow;
+  }
+  75% {
+    color: red;
+  }
+  100% {
+    color: pink;
+  }
+}

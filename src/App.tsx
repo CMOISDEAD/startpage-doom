@@ -1,71 +1,64 @@
+import { dev, media, school } from "./pages";
 import { Logo } from "./logo";
-
-interface Page {
-  name: string;
-  link: string;
-}
-
-const pages: Page[] = [
-  {
-    name: "Reddit",
-    link: "https://reddit.com/r/unixporn/",
-  },
-  {
-    name: "Github",
-    link: "https://github.com/",
-  },
-  {
-    name: "Hacker News",
-    link: "https://news.ycombinator.com/",
-  },
-  {
-    name: "Youtube",
-    link: "https://youtube.com/",
-  },
-  {
-    name: "Cuevana",
-    link: "https://cuevana3.me/",
-  },
-  {
-    name: "Mail",
-    link: "https://gmail.com/",
-  },
-  {
-    name: "Discord",
-    link: "https://discord.com/",
-  },
-];
+import { Footer } from "./Footer";
 
 function App() {
   return (
-    <div className="h-screen bg-[#161616] flex flex-col content-center items-center justify-center">
-      <div className="text-sky-500 font-bold">
+    <div className="h-screen bg-black flex flex-col content-center items-center justify-center gap-4">
+      <div className="text-sky-500 font-bold hover:animate-pulse">
         <Logo />
       </div>
-      {/* <input */}
-      {/*   className="rounded-sm w-96 bg-[#262626] p-1 text-zinc-200" */}
-      {/*   type="text" */}
-      {/*   placeholder="Search on google..." */}
-      {/* /> */}
-      <div className="sections text-center text-white font-bold mb-5">
-        {pages.map((page, i) => {
-          return (
-            <div>
-              <a
-                href={page.link}
-                className="uppercase hover:text-sky-500"
-                key={i}
-                target="_blank"
-              >
-                {page.name}
-              </a>
-            </div>
-          );
-        })}
+      <div className="flex flex-row justify-between gap-28 mb-10">
+        <div className="text-center text-white font-bold flex flex-col ">
+          {dev
+            .sort((a, b) => b.name.length - a.name.length)
+            .map((page, i) => {
+              return (
+                <a
+                  href={page.link}
+                  className="uppercase hover:text-sky-500 transition delay-75 duration-300 ease-in-out"
+                  key={i}
+                  target="_blank"
+                >
+                  {page.name}
+                </a>
+              );
+            })}
+        </div>
+        <div className="text-center text-white font-bold flex flex-col">
+          {media
+            .sort((a, b) => b.name.length - a.name.length)
+            .map((page, i) => {
+              return (
+                <a
+                  href={page.link}
+                  className="uppercase hover:text-sky-500 transition delay-75 duration-300 ease-in-out"
+                  key={i}
+                  target="_blank"
+                >
+                  {page.name}
+                </a>
+              );
+            })}
+        </div>
+        <div className="text-center text-white font-bold flex flex-col">
+          {school
+            .sort((a, b) => b.name.length - a.name.length)
+            .map((page, i) => {
+              return (
+                <a
+                  href={page.link}
+                  className="uppercase hover:text-sky-500 transition delay-75 duration-300 ease-in-out"
+                  key={i}
+                  target="_blank"
+                >
+                  {page.name}
+                </a>
+              );
+            })}
+        </div>
       </div>
-      <div className="footer text-center text-sky-500">
-        <a href="https://github.com/CMOISDEAD">One ring to rule them all...</a>
-      </div>
+      <Footer />
     </div>
   );
 }
