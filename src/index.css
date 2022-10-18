@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Scientifica", "JetBrains Mono Nerd Font Mono", Inter, Avenir,
+    Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.logo {
+  font-family: "Scientifica";
+  font-size: 16px;
+  line-height: 16px;
+}
