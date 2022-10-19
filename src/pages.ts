@@ -32,8 +32,8 @@ export const media: Page[] = [
     link: "https://cuevana3.me/",
   },
   {
-    name: "Youtube",
-    link: "https://youtube.com/",
+    name: "Piped",
+    link: "https://piped.kavin.rocks/",
   },
 
   {
