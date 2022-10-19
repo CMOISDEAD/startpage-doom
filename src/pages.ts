@@ -52,7 +52,7 @@ export const school: Page[] = [
     link: "https://aulasvirtuales.uniquindio.edu.co/",
   },
   {
-    name: "Classrom",
+    name: "Classroom",
     link: "https://classroom.google.com/u/1/",
   },
   {
