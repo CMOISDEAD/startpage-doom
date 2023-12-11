@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useColor = () => {
   const [color, setColor] = useState(
-    localStorage.getItem("color") || "#000000"
+    localStorage.getItem("color") || "#eab308"
   );
 
   useEffect(() => {
