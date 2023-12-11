@@ -3,10 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #000000;
+}
+
 body {
   font-family: "Inconsolata", sans-serif, Inter, Avenir, Helvetica, Arial,
     sans-serif;
   font-size: 16px;
+}
+
+.text-primary,
+.link-primary:hover {
+  color: var(--color-primary);
 }
 
 .logo {

@@ -1,18 +1,23 @@
+import { Picker } from "./Picker";
+
 export const Frame = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="relative h-screen text-white bg-black">
-      <div className="text-yellow-500 japanese">
+      <div className="text-primary japanese">
         <div className="absolute top-0 left-1 font-bold">
           サイバーパンクの精神
         </div>
+        <div className="absolute top-0 right-1">
+          <Picker />
+        </div>
       </div>
-      <div className="text-yellow-500 japanese">
+      <div className="text-primary japanese">
         <div className="absolute top-0 bottom-0 right-1 m-auto h-32 font-bold tl">
           ≣のアク子的な力
         </div>
       </div>
       {children}
-      <div className="text-yellow-500 japanese">
+      <div className="text-primary japanese">
         <div className="absolute bottom-0 left-1 font-bold">
           サイバースペース
         </div>
