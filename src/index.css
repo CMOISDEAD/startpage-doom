@@ -1,33 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: "Scientifica", "JetBrains Mono Nerd Font Mono", Inter, Avenir,
-    Helvetica, Arial, sans-serif;
+  font-family: "Inconsolata", sans-serif, Inter, Avenir, Helvetica, Arial,
+    sans-serif;
   font-size: 16px;
 }
 
 .logo {
-  font-family: "Scientifica";
-  font-size: 16px;
+  @apply text-xs cursor-default;
   line-height: 16px;
+}
+
+.japanese {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.scroll-left {
+  animation: scrollLeft 10s linear infinite;
+}
+
+.tl {
+  writing-mode: vertical-rl;
 }
 
 @keyframes colorful {
   0% {
     color: cyan;
   }
+
   25% {
     color: green;
   }
+
   50% {
     color: yellow;
   }
+
   75% {
     color: red;
   }
+
   100% {
     color: pink;
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
   }
 }
